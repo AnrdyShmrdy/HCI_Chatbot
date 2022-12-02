@@ -40,6 +40,22 @@
                     "name": "Send a response"
                   },
                   "activity": "${SendActivity_Greeting()}"
+                },
+                {
+                  "$kind": "GenerateTicket",
+                  "$designer": {
+                    "id": "NQkhrH"
+                  },
+                  "arg1": 8,
+                  "arg2": "8",
+                  "resultProperty": "dialog.result"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "KYfnC6"
+                  },
+                  "activity": "${SendActivity_KYfnC6()}"
                 }
               ]
             }

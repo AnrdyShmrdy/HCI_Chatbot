@@ -15,3 +15,10 @@
 
 # SendActivity_DidNotUnderstand_text()
 - Sorry, I didn't get that.
+# SendActivity_KYfnC6()
+[Activity
+    Text = ${SendActivity_KYfnC6_text()}
+]
+
+# SendActivity_KYfnC6_text()
+- ${dialog.result}
