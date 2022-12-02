@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using AdaptiveExpressions.Properties;
@@ -64,8 +66,28 @@ namespace GenerateTicket
         {
             var arg1 = Arg1.GetValue(dc.State);
             var arg2 = Arg2.GetValue(dc.State);
+            string path = @"c:\temp\MyTest.txt";
 
-            var result = Convert.ToInt32(arg1) * Convert.ToInt32(arg2);
+            // Delete the file if it exists.
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
+            static void AddText(FileStream fs, string value)
+            {
+                byte[] info = new UTF8Encoding(true).GetBytes(value);
+                fs.Write(info, 0, info.Length);
+            }
+
+            //Create the file.
+            using (FileStream fs = File.Create(path))
+            {
+                AddText(fs, "This is the value of arg1: " + arg1.ToString());
+                AddText(fs, "This is the value of arg2: " + arg2.ToString());
+            }
+            var result = 0; /*Convert.ToInt32(arg1) * Convert.ToInt32(arg2);*/
+
             if (this.ResultProperty != null)
             {
                 dc.State.SetValue(this.ResultProperty.GetValue(dc.State), result);
