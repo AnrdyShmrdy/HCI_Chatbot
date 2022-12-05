@@ -5,6 +5,9 @@
   "description": "These are all of the kinds that can be created by the loader.",
   "oneOf": [
     {
+      "$ref": "#/definitions/GenerateTicket"
+    },
+    {
       "$ref": "#/definitions/Microsoft.ActivityTemplate"
     },
     {
@@ -442,6 +445,61 @@
       "examples": [
         "user.age > 13"
       ]
+    },
+    "GenerateTicket": {
+      "$role": "implements(Microsoft.IDialog)",
+      "title": "GenerateTicket",
+      "description": "This will generate a ticket for the user",
+      "type": "object",
+      "required": [
+        "$kind"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^\\$": {
+          "title": "Tooling property",
+          "description": "Open ended property for tooling."
+        }
+      },
+      "properties": {
+        "filePath": {
+          "$ref": "#/definitions/stringExpression",
+          "title": "Ticket File Path",
+          "description": "Path to location of ticket file"
+        },
+        "name": {
+          "$ref": "#/definitions/valueExpression",
+          "title": "Name",
+          "description": "Name of user"
+        },
+        "email": {
+          "$ref": "#/definitions/valueExpression",
+          "title": "Email",
+          "description": "Email of user"
+        },
+        "phoneNumber": {
+          "$ref": "#/definitions/valueExpression",
+          "title": "Phone Number",
+          "description": "Phone number of user"
+        },
+        "ticketNumber": {
+          "$ref": "#/definitions/valueExpression",
+          "title": "Ticket Number",
+          "description": "Number for the ticket generated for the user"
+        },
+        "$kind": {
+          "title": "Kind of dialog object",
+          "description": "Defines the valid properties for the component you are configuring (from a dialog .schema file)",
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9.]*$",
+          "const": "GenerateTicket"
+        },
+        "$designer": {
+          "title": "Designer information",
+          "type": "object",
+          "description": "Extra information for the Bot Framework Composer."
+        }
+      }
     },
     "integerExpression": {
       "$role": "expression",
@@ -3932,6 +3990,9 @@
       "description": "Components which derive from Dialog",
       "$role": "interface",
       "oneOf": [
+        {
+          "$ref": "#/definitions/GenerateTicket"
+        },
         {
           "$ref": "#/definitions/Microsoft.AdaptiveDialog"
         },
