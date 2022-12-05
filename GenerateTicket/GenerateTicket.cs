@@ -36,42 +36,64 @@ namespace GenerateTicket
         public const string Kind = "GenerateTicket";
 
         /// <summary>
-        /// Gets or sets memory path to bind to arg1 (ex: conversation.width).
+        /// Gets or sets caller's memory path to store the file path of this step in (ex: conversation.area).
         /// </summary>
         /// <value>
-        /// Memory path to bind to arg1 (ex: conversation.width).
+        /// Caller's memory path to store the file path of this step in (ex: conversation.area).
         /// </value>
-        [JsonProperty("arg1")]
-        public ValueExpression Arg1 { get; set; }
+        [JsonProperty("filePath")]
+        public StringExpression FilePath { get; set; }
 
         /// <summary>
-        /// Gets or sets memory path to bind to arg2 (ex: conversation.height).
+        /// Gets or sets caller's memory path to store the ticket number of this step in (ex: conversation.area).
         /// </summary>
         /// <value>
-        /// Memory path to bind to arg2 (ex: conversation.height).
+        /// Caller's memory path to store the ticket number of this step in (ex: conversation.area).
         /// </value>
-        [JsonProperty("arg2")]
-        public ValueExpression Arg2 { get; set; }
+        [JsonProperty("ticketNumber")]
+        public ValueExpression TicketNumber { get; set; }
 
         /// <summary>
-        /// Gets or sets caller's memory path to store the result of this step in (ex: conversation.area).
+        /// Gets or sets caller's memory path to store the user name of this step in (ex: conversation.area).
         /// </summary>
         /// <value>
-        /// Caller's memory path to store the result of this step in (ex: conversation.area).
+        /// Caller's memory path to store the user name of this step in (ex: conversation.area).
         /// </value>
-        [JsonProperty("resultProperty")]
-        public StringExpression ResultProperty { get; set; }
+        [JsonProperty("name")]
+        public ValueExpression Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets caller's memory path to store the user phone number of this step in (ex: conversation.area).
+        /// </summary>
+        /// <value>
+        /// Caller's memory path to store the user phone number of this step in (ex: conversation.area).
+        /// </value>
+        [JsonProperty("phoneNumber")]
+        public ValueExpression PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Gets or sets caller's memory path to store the user email of this step in (ex: conversation.area).
+        /// </summary>
+        /// <value>
+        /// Caller's memory path to store the user email of this step in (ex: conversation.area).
+        /// </value>
+        [JsonProperty("email")]
+        public ValueExpression Email { get; set; }
 
         public override Task<DialogTurnResult> BeginDialogAsync(DialogContext dc, object options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var arg1 = Arg1.GetValue(dc.State);
-            var arg2 = Arg2.GetValue(dc.State);
-            string path = @"c:\temp\MyTest.txt";
+            Random rnd = new Random();
+            var filePath = FilePath.GetValue(dc.State);
+            var email = Email.GetValue(dc.State);
+            var phoneNumber = PhoneNumber.GetValue(dc.State);
+            var ticketNumber = rnd.Next(100000, 500000);
+            var name = Name.GetValue(dc.State);
+            //string filePath = @"c:\temp\MyTest.txt";
 
             // Delete the file if it exists.
-            if (File.Exists(path))
+            if (File.Exists(filePath))
             {
-                File.Delete(path);
+                File.Delete(filePath);
             }
 
             static void AddText(FileStream fs, string value)
@@ -81,19 +103,20 @@ namespace GenerateTicket
             }
 
             //Create the file.
-            using (FileStream fs = File.Create(path))
+            using (FileStream fs = File.Create(filePath))
             {
-                AddText(fs, "This is the value of arg1: " + arg1.ToString());
-                AddText(fs, "This is the value of arg2: " + arg2.ToString());
-            }
-            var result = 0; /*Convert.ToInt32(arg1) * Convert.ToInt32(arg2);*/
-
-            if (this.ResultProperty != null)
-            {
-                dc.State.SetValue(this.ResultProperty.GetValue(dc.State), result);
+                AddText(fs, "Ticket Number: " + ticketNumber.ToString());
+                AddText(fs, "\n\tName: " + name.ToString());
+                AddText(fs, "\n\tEmail: " + email.ToString());
+                AddText(fs, "\n\tPhone Number: " + phoneNumber.ToString());
             }
 
-            return dc.EndDialogAsync(result: result, cancellationToken: cancellationToken);
+            if (this.TicketNumber != null)
+            {
+                dc.State.SetValue(this.TicketNumber.GetValue(dc.State).ToString(), ticketNumber);
+            }
+            return dc.EndDialogAsync(result: ticketNumber, cancellationToken: cancellationToken);
+
         }
     }
 }

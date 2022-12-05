@@ -42,13 +42,63 @@
                   "activity": "${SendActivity_Greeting()}"
                 },
                 {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "lPMu2a"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${TextInput_Prompt_lPMu2a()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "property": "user.name"
+                },
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "dPll3t"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "prompt": "${TextInput_Prompt_dPll3t()}",
+                  "property": "user.email"
+                },
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "C2ekVK"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "prompt": "${TextInput_Prompt_C2ekVK()}",
+                  "property": "user.phoneNumber"
+                },
+                {
                   "$kind": "GenerateTicket",
                   "$designer": {
                     "id": "NQkhrH"
                   },
                   "arg1": 8,
                   "arg2": "8",
-                  "resultProperty": "dialog.result"
+                  "resultProperty": "dialog.result",
+                  "filePath": "c:\\temp\\MyTest.txt",
+                  "ticketNumber": "dialog.result",
+                  "email": "=user.email",
+                  "name": "=user.name",
+                  "phoneNumber": "=user.phoneNumber"
                 },
                 {
                   "$kind": "Microsoft.SendActivity",

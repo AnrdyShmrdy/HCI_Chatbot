@@ -462,20 +462,30 @@
         }
       },
       "properties": {
-        "arg1": {
-          "$ref": "#/definitions/valueExpression",
-          "title": "Arg1",
-          "description": "Value from callers memory to use as arg 1"
-        },
-        "arg2": {
-          "$ref": "#/definitions/valueExpression",
-          "title": "Arg2",
-          "description": "Value from callers memory to use as arg 2"
-        },
-        "resultProperty": {
+        "filePath": {
           "$ref": "#/definitions/stringExpression",
-          "title": "Result",
-          "description": "Value from callers memory to store the result"
+          "title": "Ticket File Path",
+          "description": "Path to location of ticket file"
+        },
+        "name": {
+          "$ref": "#/definitions/valueExpression",
+          "title": "Name",
+          "description": "Name of user"
+        },
+        "email": {
+          "$ref": "#/definitions/valueExpression",
+          "title": "Email",
+          "description": "Email of user"
+        },
+        "phoneNumber": {
+          "$ref": "#/definitions/valueExpression",
+          "title": "Phone Number",
+          "description": "Phone number of user"
+        },
+        "ticketNumber": {
+          "$ref": "#/definitions/valueExpression",
+          "title": "Ticket Number",
+          "description": "Number for the ticket generated for the user"
         },
         "$kind": {
           "title": "Kind of dialog object",

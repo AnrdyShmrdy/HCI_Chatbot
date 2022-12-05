@@ -21,4 +21,25 @@
 ]
 
 # SendActivity_KYfnC6_text()
-- ${dialog.result}
+- Your ticket number is: ${dialog.result}
+# TextInput_Prompt_lPMu2a()
+[Activity
+    Text = ${TextInput_Prompt_lPMu2a_text()}
+]
+
+# TextInput_Prompt_lPMu2a_text()
+- What is your name?
+# TextInput_Prompt_dPll3t()
+[Activity
+    Text = ${TextInput_Prompt_dPll3t_text()}
+]
+
+# TextInput_Prompt_dPll3t_text()
+- What is your email?
+# TextInput_Prompt_C2ekVK()
+[Activity
+    Text = ${TextInput_Prompt_C2ekVK_text()}
+]
+
+# TextInput_Prompt_C2ekVK_text()
+- What is your phone number?
