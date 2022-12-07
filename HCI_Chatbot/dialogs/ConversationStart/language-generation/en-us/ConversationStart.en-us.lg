@@ -5,5 +5,6 @@
 # SendActivity_fgBTsz()
 [Activity
     Text = ${SendActivity_fgBTsz_text()}
-    SuggestedActions = printer connection | computer virus | internet connectivity | computer slow | computer not turning on
+    SuggestedActions = printer connection | computer virus | internet connectivity | computer slow | computer not turning on | other problem
 ]
+

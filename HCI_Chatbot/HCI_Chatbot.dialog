@@ -162,6 +162,24 @@
           "dialog": "InternetConnectivity"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "VFpFfZ",
+        "name": "OtherProblem"
+      },
+      "intent": "OtherProblem",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "Ait2wf"
+          },
+          "activityProcessed": true,
+          "dialog": "TicketCreation"
+        }
+      ]
     }
   ],
   "generator": "HCI_Chatbot.lg",
@@ -188,6 +206,10 @@
       {
         "intent": "InternetConnectivity",
         "pattern": "internet connectivity"
+      },
+      {
+        "intent": "OtherProblem",
+        "pattern": "other problem"
       }
     ]
   }
