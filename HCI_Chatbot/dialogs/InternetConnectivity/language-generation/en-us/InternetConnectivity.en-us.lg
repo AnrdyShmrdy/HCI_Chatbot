@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_qThzSK()
+[Activity
+    Text = ${SendActivity_qThzSK_text()}
+]
+
+# SendActivity_qThzSK_text()
+- Go out smell the flowers, touch grass you filthy degenerate neet

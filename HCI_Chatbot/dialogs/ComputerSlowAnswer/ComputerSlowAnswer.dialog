@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Ay0xAC",
+    "name": "ComputerSlowAnswer",
+    "comment": "Response to question regarding a slow computer"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "Ex1w4J"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Wo8PaN"
+          },
+          "activity": "${SendActivity_Wo8PaN()}"
+        }
+      ]
+    }
+  ],
+  "generator": "ComputerSlowAnswer.lg",
+  "recognizer": "ComputerSlowAnswer.lu.qna",
+  "id": "ComputerSlowAnswer"
+}

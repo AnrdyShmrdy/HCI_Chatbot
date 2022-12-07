@@ -1,0 +1,91 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "aK5Yge",
+    "name": "TicketCreation",
+    "comment": "Dialog process to create a ticket for a user"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ZClVxh"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "wNw7T1"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_wNw7T1()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.name"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "T0CSw3"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_T0CSw3()}",
+          "property": "user.email"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "E4JWZq"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_E4JWZq()}",
+          "property": "user.phoneNumber"
+        },
+        {
+          "$kind": "GenerateTicket",
+          "$designer": {
+            "id": "xrcJCM"
+          },
+          "arg1": 8,
+          "arg2": "8",
+          "resultProperty": "dialog.result",
+          "filePath": "c:\\temp\\MyTest.txt",
+          "ticketNumber": "dialog.result",
+          "email": "=user.email",
+          "name": "=user.name",
+          "phoneNumber": "=user.phoneNumber"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "lghK7W"
+          },
+          "activity": "${SendActivity_lghK7W()}"
+        }
+      ]
+    }
+  ],
+  "generator": "TicketCreation.lg",
+  "recognizer": "TicketCreation.lu.qna",
+  "id": "TicketCreation"
+}

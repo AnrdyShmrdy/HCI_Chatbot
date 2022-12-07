@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_sffSzl()
+[Activity
+    Text = ${SendActivity_sffSzl_text()}
+]
+
+# SendActivity_sffSzl_text()
+- No you

@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "LehfFs",
+    "name": "ConversationStart",
+    "comment": "Start of the Conversation"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "WDq39f"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "fgBTsz"
+          },
+          "activity": "${SendActivity_fgBTsz()}"
+        }
+      ]
+    }
+  ],
+  "generator": "ConversationStart.lg",
+  "recognizer": "ConversationStart.lu.qna",
+  "id": "ConversationStart"
+}

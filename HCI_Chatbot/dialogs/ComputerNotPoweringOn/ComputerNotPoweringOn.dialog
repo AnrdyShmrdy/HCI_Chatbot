@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "8rXvdb",
+    "name": "ComputerNotPoweringOn",
+    "comment": "Response to question about computer not powering on"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "gVECXv"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "sffSzl"
+          },
+          "activity": "${SendActivity_sffSzl()}"
+        }
+      ]
+    }
+  ],
+  "generator": "ComputerNotPoweringOn.lg",
+  "recognizer": "ComputerNotPoweringOn.lu.qna",
+  "id": "ComputerNotPoweringOn"
+}

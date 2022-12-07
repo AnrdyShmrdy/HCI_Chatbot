@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_GGw82m()
+[Activity
+    Text = ${SendActivity_GGw82m_text()}
+]
+
+# SendActivity_GGw82m_text()
+- Saddness. You can't print out the nudies no more

@@ -1,0 +1,40 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "jUvs5V",
+    "name": "PrinterConnection",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "aLDtcX"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "GGw82m"
+          },
+          "activity": "${SendActivity_GGw82m()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "pUkIx0"
+          },
+          "activityProcessed": true,
+          "dialog": "PromptForAdditionalQuestions"
+        }
+      ]
+    }
+  ],
+  "generator": "PrinterConnection.lg",
+  "recognizer": "PrinterConnection.lu.qna",
+  "id": "PrinterConnection"
+}

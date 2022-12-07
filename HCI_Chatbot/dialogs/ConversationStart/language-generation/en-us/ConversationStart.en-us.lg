@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_fgBTsz_text()
+- What kind of problem are you having?
+# SendActivity_fgBTsz()
+[Activity
+    Text = ${SendActivity_fgBTsz_text()}
+    SuggestedActions = printer connection | computer virus | internet connectivity | computer slow | computer not turning on
+]

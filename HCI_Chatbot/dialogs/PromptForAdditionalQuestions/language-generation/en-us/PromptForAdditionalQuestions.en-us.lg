@@ -1,0 +1,24 @@
+[import](common.lg)
+
+# ConfirmInput_Prompt_OjHKhT()
+[Activity
+    Text = ${ConfirmInput_Prompt_OjHKhT_text()}
+    SuggestedActions = Yes | No
+]
+
+# ConfirmInput_Prompt_OjHKhT_text()
+- Do you have any other questions FOOLISH MORTAL!
+# SendActivity_YatEGr()
+[Activity
+    Text = ${SendActivity_YatEGr_text()}
+]
+
+# SendActivity_YatEGr_text()
+- NOOOOOOOOO
+# SendActivity_HEoZIB()
+[Activity
+    Text = ${SendActivity_HEoZIB_text()}
+]
+
+# SendActivity_HEoZIB_text()
+- YAAAAAY
