@@ -22,6 +22,14 @@
             "id": "sffSzl"
           },
           "activity": "${SendActivity_sffSzl()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "x6wM7f"
+          },
+          "activityProcessed": true,
+          "dialog": "PromptForAdditionalQuestions"
         }
       ]
     }

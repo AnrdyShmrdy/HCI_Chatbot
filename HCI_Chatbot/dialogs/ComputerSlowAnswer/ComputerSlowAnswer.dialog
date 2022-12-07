@@ -22,6 +22,14 @@
             "id": "Wo8PaN"
           },
           "activity": "${SendActivity_Wo8PaN()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "jZoHCL"
+          },
+          "activityProcessed": true,
+          "dialog": "PromptForAdditionalQuestions"
         }
       ]
     }

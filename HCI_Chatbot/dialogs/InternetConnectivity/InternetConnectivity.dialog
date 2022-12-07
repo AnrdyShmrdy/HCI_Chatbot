@@ -22,6 +22,14 @@
             "id": "qThzSK"
           },
           "activity": "${SendActivity_qThzSK()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "KrOQAV"
+          },
+          "activityProcessed": true,
+          "dialog": "PromptForAdditionalQuestions"
         }
       ]
     }

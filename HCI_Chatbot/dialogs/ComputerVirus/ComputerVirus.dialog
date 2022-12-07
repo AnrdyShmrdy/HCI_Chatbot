@@ -22,6 +22,14 @@
             "id": "xJHokB"
           },
           "activity": "${SendActivity_xJHokB()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "LZl2NV"
+          },
+          "activityProcessed": true,
+          "dialog": "PromptForAdditionalQuestions"
         }
       ]
     }
