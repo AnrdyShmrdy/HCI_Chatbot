@@ -45,13 +45,6 @@
           },
           "actions": [
             {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "HEoZIB"
-              },
-              "activity": "${SendActivity_HEoZIB()}"
-            },
-            {
               "$kind": "Microsoft.BeginDialog",
               "$designer": {
                 "id": "8uP5Mo"
