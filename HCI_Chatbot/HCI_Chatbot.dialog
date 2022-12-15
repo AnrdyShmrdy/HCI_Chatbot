@@ -12,7 +12,8 @@
       "$kind": "Microsoft.OnConversationUpdateActivity",
       "$designer": {
         "id": "376720",
-        "comment": "This trigger runs when a conversation update activity is sent to the bot. This indicates a user or bot being added or removed from a conversation."
+        "comment": "This trigger runs when a conversation update activity is sent to the bot. This indicates a user or bot being added or removed from a conversation.",
+        "name": "ConversationStart"
       },
       "actions": [
         {
@@ -34,78 +35,12 @@
               "condition": "=string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
               "actions": [
                 {
-                  "$kind": "Microsoft.SendActivity",
+                  "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "859266",
-                    "name": "Send a response"
+                    "id": "Hr6A7d"
                   },
-                  "activity": "${SendActivity_Greeting()}"
-                },
-                {
-                  "$kind": "Microsoft.TextInput",
-                  "$designer": {
-                    "id": "lPMu2a"
-                  },
-                  "disabled": false,
-                  "maxTurnCount": 3,
-                  "alwaysPrompt": false,
-                  "allowInterruptions": false,
-                  "prompt": "${TextInput_Prompt_lPMu2a()}",
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "defaultValueResponse": "",
-                  "property": "user.name"
-                },
-                {
-                  "$kind": "Microsoft.TextInput",
-                  "$designer": {
-                    "id": "dPll3t"
-                  },
-                  "disabled": false,
-                  "maxTurnCount": 3,
-                  "alwaysPrompt": false,
-                  "allowInterruptions": false,
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "defaultValueResponse": "",
-                  "prompt": "${TextInput_Prompt_dPll3t()}",
-                  "property": "user.email"
-                },
-                {
-                  "$kind": "Microsoft.TextInput",
-                  "$designer": {
-                    "id": "C2ekVK"
-                  },
-                  "disabled": false,
-                  "maxTurnCount": 3,
-                  "alwaysPrompt": false,
-                  "allowInterruptions": false,
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "defaultValueResponse": "",
-                  "prompt": "${TextInput_Prompt_C2ekVK()}",
-                  "property": "user.phoneNumber"
-                },
-                {
-                  "$kind": "GenerateTicket",
-                  "$designer": {
-                    "id": "NQkhrH"
-                  },
-                  "arg1": 8,
-                  "arg2": "8",
-                  "resultProperty": "dialog.result",
-                  "filePath": "c:\\temp\\MyTest.txt",
-                  "ticketNumber": "dialog.result",
-                  "email": "=user.email",
-                  "name": "=user.name",
-                  "phoneNumber": "=user.phoneNumber"
-                },
-                {
-                  "$kind": "Microsoft.SendActivity",
-                  "$designer": {
-                    "id": "KYfnC6"
-                  },
-                  "activity": "${SendActivity_KYfnC6()}"
+                  "activityProcessed": true,
+                  "dialog": "ConversationStart"
                 }
               ]
             }
@@ -121,17 +56,161 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "kMjqz1",
-            "comment": "It is recommended to show a message to the user when the bot does not know how to handle an incoming activity and provide follow up options or a help message."
+            "id": "a1H1JU"
           },
-          "activity": "${SendActivity_DidNotUnderstand()}"
+          "activityProcessed": true,
+          "dialog": "ConversationStart"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "tSMGiX",
+        "name": "ComputerSlow"
+      },
+      "intent": "ComputerSlow",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "QP9HCa"
+          },
+          "activityProcessed": true,
+          "dialog": "ComputerSlowAnswer"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "UQqTQT"
+          },
+          "activityProcessed": true,
+          "dialog": "PromptForAdditionalQuestions"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "It9Kwm",
+        "name": "ComputerNotPoweringOn"
+      },
+      "intent": "ComputerNotPoweringOn",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "uR3gOT"
+          },
+          "activityProcessed": true,
+          "dialog": "ComputerNotPoweringOn"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "4PpEg0",
+        "name": "ComputerVirus"
+      },
+      "intent": "ComputerVirus",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "wh32DI"
+          },
+          "activityProcessed": true,
+          "dialog": "ComputerVirus"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "HRXSbG",
+        "name": "PrinterConnection"
+      },
+      "intent": "PrinterConnection",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "dcBH0n"
+          },
+          "activityProcessed": true,
+          "dialog": "PrinterConnection"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "4O6BX3",
+        "name": "InternetConnectivity"
+      },
+      "intent": "InternetConnectivity",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "rY7RXU"
+          },
+          "activityProcessed": true,
+          "dialog": "InternetConnectivity"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "VFpFfZ",
+        "name": "OtherProblem"
+      },
+      "intent": "OtherProblem",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "Ait2wf"
+          },
+          "activityProcessed": true,
+          "dialog": "TicketCreation"
         }
       ]
     }
   ],
   "generator": "HCI_Chatbot.lg",
   "id": "HCI_Chatbot",
-  "recognizer": "HCI_Chatbot.lu.qna"
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "ComputerSlow",
+        "pattern": "computer slow"
+      },
+      {
+        "intent": "ComputerNotPoweringOn",
+        "pattern": "computer not turning on"
+      },
+      {
+        "intent": "ComputerVirus",
+        "pattern": "computer virus"
+      },
+      {
+        "intent": "PrinterConnection",
+        "pattern": "printer connection"
+      },
+      {
+        "intent": "InternetConnectivity",
+        "pattern": "internet connectivity"
+      },
+      {
+        "intent": "OtherProblem",
+        "pattern": "other problem"
+      }
+    ]
+  }
 }

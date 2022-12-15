@@ -1,0 +1,29 @@
+[import](common.lg)
+
+# TextInput_Prompt_wNw7T1_text()
+- What is your name?
+# TextInput_Prompt_wNw7T1()
+[Activity
+    Text = ${TextInput_Prompt_wNw7T1_text()}
+]
+
+# TextInput_Prompt_T0CSw3_text()
+- What is your email?
+# TextInput_Prompt_T0CSw3()
+[Activity
+    Text = ${TextInput_Prompt_T0CSw3_text()}
+]
+
+# TextInput_Prompt_E4JWZq_text()
+- What is your phone number?
+# TextInput_Prompt_E4JWZq()
+[Activity
+    Text = ${TextInput_Prompt_E4JWZq_text()}
+]
+
+# SendActivity_lghK7W_text()
+- Your ticket number is: ${dialog.result}
+# SendActivity_lghK7W()
+[Activity
+    Text = ${SendActivity_lghK7W_text()}
+]

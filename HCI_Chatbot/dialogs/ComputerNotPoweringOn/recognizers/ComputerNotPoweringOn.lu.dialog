@@ -1,5 +1,5 @@
 {
   "$kind": "Microsoft.MultiLanguageRecognizer",
-  "id": "LUIS_HCI_Chatbot",
+  "id": "LUIS_ComputerNotPoweringOn",
   "recognizers": {}
 }

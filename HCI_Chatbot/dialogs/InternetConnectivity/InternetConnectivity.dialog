@@ -1,0 +1,40 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "vWmvgR",
+    "name": "InternetConnectivity",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "mHhLGr"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "qThzSK"
+          },
+          "activity": "${SendActivity_qThzSK()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "KrOQAV"
+          },
+          "activityProcessed": true,
+          "dialog": "PromptForAdditionalQuestions"
+        }
+      ]
+    }
+  ],
+  "generator": "InternetConnectivity.lg",
+  "recognizer": "InternetConnectivity.lu.qna",
+  "id": "InternetConnectivity"
+}

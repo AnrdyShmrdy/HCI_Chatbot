@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_Wo8PaN()
+[Activity
+    Text = ${SendActivity_Wo8PaN_text()}
+]
+
+# SendActivity_Wo8PaN_text()
+- See this resource: https://www.cnet.com/tech/computing/why-is-my-computer-so-slow/

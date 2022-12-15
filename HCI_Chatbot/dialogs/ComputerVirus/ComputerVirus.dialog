@@ -1,0 +1,40 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "SNgHZS",
+    "name": "ComputerVirus",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "sfAYOM"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "xJHokB"
+          },
+          "activity": "${SendActivity_xJHokB()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "LZl2NV"
+          },
+          "activityProcessed": true,
+          "dialog": "PromptForAdditionalQuestions"
+        }
+      ]
+    }
+  ],
+  "generator": "ComputerVirus.lg",
+  "recognizer": "ComputerVirus.lu.qna",
+  "id": "ComputerVirus"
+}

@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_qThzSK()
+[Activity
+    Text = ${SendActivity_qThzSK_text()}
+]
+
+# SendActivity_qThzSK_text()
+- Check out this website: https://www.highspeedinternet.com/resources/no-internet-connection-troubleshooting-guide

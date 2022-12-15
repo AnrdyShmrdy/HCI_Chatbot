@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_xJHokB()
+[Activity
+    Text = ${SendActivity_xJHokB_text()}
+]
+
+# SendActivity_xJHokB_text()
+- See this resource: https://www.businessnewsdaily.com/1368-6-signs-computer-infected.html

@@ -1,0 +1,73 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "nnDbPZ",
+    "name": "PromptForAdditionalQuestions",
+    "comment": "Ask user if they have any other questions. If yes, return to start of conversation. If no, end conversation"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "yqGn6i"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "OjHKhT"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${ConfirmInput_Prompt_OjHKhT()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "user.response",
+          "confirmChoices": []
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "ITGCzx"
+          },
+          "actions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "8uP5Mo"
+              },
+              "activityProcessed": true,
+              "dialog": "ConversationStart"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "YatEGr"
+              },
+              "activity": "${SendActivity_YatEGr()}"
+            }
+          ],
+          "condition": "=user.response"
+        }
+      ]
+    }
+  ],
+  "generator": "PromptForAdditionalQuestions.lg",
+  "recognizer": "PromptForAdditionalQuestions.lu.qna",
+  "id": "PromptForAdditionalQuestions"
+}

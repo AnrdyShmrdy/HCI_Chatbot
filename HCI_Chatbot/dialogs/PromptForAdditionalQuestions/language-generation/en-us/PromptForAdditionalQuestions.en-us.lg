@@ -1,0 +1,17 @@
+[import](common.lg)
+
+# ConfirmInput_Prompt_OjHKhT()
+[Activity
+    Text = ${ConfirmInput_Prompt_OjHKhT_text()}
+    SuggestedActions = Yes | No
+]
+
+# ConfirmInput_Prompt_OjHKhT_text()
+- Do you have any other questions?
+# SendActivity_YatEGr()
+[Activity
+    Text = ${SendActivity_YatEGr_text()}
+]
+
+# SendActivity_YatEGr_text()
+- Have a great day!
