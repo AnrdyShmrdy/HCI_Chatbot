@@ -1,0 +1,26 @@
+{
+  "HCI_Chatbot.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "ConversationStart.en-us"
+      ],
+      "ComputerSlow": [
+        "ComputerSlowAnswer.en-us",
+        "PromptForAdditionalQuestions.en-us"
+      ],
+      "ComputerVirus": [
+        "ComputerVirus.en-us"
+      ],
+      "PrinterConnection": [
+        "PrinterConnection.en-us"
+      ],
+      "OtherProblem": [
+        "TicketCreation.en-us"
+      ],
+      "CommunicateWithServer": [
+        "CommunicateWithServerDialog.en-us"
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "9Tw8UJ",
+    "name": "CommunicateWithServerDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "WIh0cP"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "9AXLWE"
+          },
+          "activity": "${SendActivity_9AXLWE()}"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "10gG1m"
+          },
+          "arg1": 12,
+          "arg2": 13,
+          "resultProperty": "dialog.result"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "g5NRAY"
+          },
+          "activity": "${SendActivity_g5NRAY()}"
+        }
+      ]
+    }
+  ],
+  "generator": "CommunicateWithServerDialog.lg",
+  "recognizer": "CommunicateWithServerDialog.lu.qna",
+  "id": "CommunicateWithServerDialog"
+}

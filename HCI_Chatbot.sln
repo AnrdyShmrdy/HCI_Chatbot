@@ -4,7 +4,9 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCI_Chatbot", "HCI_Chatbot\HCI_Chatbot.csproj", "{4ECBE11B-69D8-4FF3-9820-8492C811215A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateTicket", "GenerateTicket\GenerateTicket.csproj", "{AAF751E6-6498-42DD-B5F4-3520831DEAC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateTicket", "GenerateTicket\GenerateTicket.csproj", "{AAF751E6-6498-42DD-B5F4-3520831DEAC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicateWithServer", "CommunicateWithServer\CommunicateWithServer.csproj", "{442BAD47-17C0-412A-A732-9DE76C86EDB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{AAF751E6-6498-42DD-B5F4-3520831DEAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAF751E6-6498-42DD-B5F4-3520831DEAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAF751E6-6498-42DD-B5F4-3520831DEAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{442BAD47-17C0-412A-A732-9DE76C86EDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{442BAD47-17C0-412A-A732-9DE76C86EDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442BAD47-17C0-412A-A732-9DE76C86EDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{442BAD47-17C0-412A-A732-9DE76C86EDB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

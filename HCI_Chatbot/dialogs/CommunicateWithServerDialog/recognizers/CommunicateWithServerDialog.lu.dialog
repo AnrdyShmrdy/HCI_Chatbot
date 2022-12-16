@@ -1,5 +1,5 @@
 {
   "$kind": "Microsoft.MultiLanguageRecognizer",
-  "id": "LUIS_ComputerNotPoweringOn",
+  "id": "LUIS_CommunicateWithServerDialog",
   "recognizers": {}
 }

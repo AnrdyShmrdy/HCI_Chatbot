@@ -44,7 +44,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "value": "dialog.foreach.value",
+          "index": "dialog.foreach.index"
         }
       ]
     },
@@ -180,37 +182,27 @@
           "dialog": "TicketCreation"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "naxYys",
+        "name": "CommunicateWithServer"
+      },
+      "intent": "CommunicateWithServer",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "XuHAfE"
+          },
+          "activityProcessed": true,
+          "dialog": "CommunicateWithServerDialog"
+        }
+      ]
     }
   ],
   "generator": "HCI_Chatbot.lg",
   "id": "HCI_Chatbot",
-  "recognizer": {
-    "$kind": "Microsoft.RegexRecognizer",
-    "intents": [
-      {
-        "intent": "ComputerSlow",
-        "pattern": "computer slow"
-      },
-      {
-        "intent": "ComputerNotPoweringOn",
-        "pattern": "computer not turning on"
-      },
-      {
-        "intent": "ComputerVirus",
-        "pattern": "computer virus"
-      },
-      {
-        "intent": "PrinterConnection",
-        "pattern": "printer connection"
-      },
-      {
-        "intent": "InternetConnectivity",
-        "pattern": "internet connectivity"
-      },
-      {
-        "intent": "OtherProblem",
-        "pattern": "other problem"
-      }
-    ]
-  }
+  "recognizer": "HCI_Chatbot.lu.qna"
 }

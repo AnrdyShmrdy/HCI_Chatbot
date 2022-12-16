@@ -35,6 +35,9 @@
     }
   ],
   "generator": "ComputerNotPoweringOn.lg",
-  "recognizer": "ComputerNotPoweringOn.lu.qna",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
   "id": "ComputerNotPoweringOn"
 }
