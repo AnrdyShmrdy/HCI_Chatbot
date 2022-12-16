@@ -36,22 +36,13 @@ namespace CommunicateWithServer
         public const string Kind = "CommunicateWithServer";
 
         /// <summary>
-        /// Gets or sets memory path to bind to arg1 (ex: conversation.width).
+        /// Gets or sets memory path to bind to message (ex: conversation.width).
         /// </summary>
         /// <value>
-        /// Memory path to bind to arg1 (ex: conversation.width).
+        /// Memory path to bind to message (ex: conversation.width).
         /// </value>
-        [JsonProperty("arg1")]
-        public NumberExpression Arg1 { get; set; }
-
-        /// <summary>
-        /// Gets or sets memory path to bind to arg2 (ex: conversation.height).
-        /// </summary>
-        /// <value>
-        /// Memory path to bind to arg2 (ex: conversation.height).
-        /// </value>
-        [JsonProperty("arg2")]
-        public NumberExpression Arg2 { get; set; }
+        [JsonProperty("message")]
+        public StringExpression Message { get; set; }
 
         /// <summary>
         /// Gets or sets caller's memory path to store the result of this step in (ex: conversation.area).
@@ -67,8 +58,7 @@ namespace CommunicateWithServer
         IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
         public override Task<DialogTurnResult> BeginDialogAsync(DialogContext dc, object options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var arg1 = Arg1.GetValue(dc.State);
-            var arg2 = Arg2.GetValue(dc.State);
+            var message = Message.GetValue(dc.State);
             byte[] bytes = new byte[1024];
             string result = null;
             try
@@ -92,7 +82,7 @@ namespace CommunicateWithServer
                         sender.RemoteEndPoint.ToString());
 
                     // Encode the data string into a byte array.
-                    byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");
+                    byte[] msg = Encoding.ASCII.GetBytes(message.ToString());
 
                     // Send the data through the socket.
                     int bytesSent = sender.Send(msg);

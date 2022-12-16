@@ -401,15 +401,10 @@
         }
       },
       "properties": {
-        "arg1": {
-          "$ref": "#/definitions/integerExpression",
-          "title": "Arg1",
-          "description": "Value from callers memory to use as arg 1"
-        },
-        "arg2": {
-          "$ref": "#/definitions/integerExpression",
-          "title": "Arg2",
-          "description": "Value from callers memory to use as arg 2"
+        "message": {
+          "$ref": "#/definitions/stringExpression",
+          "title": "Message",
+          "description": "Value from callers memory to use as message"
         },
         "resultProperty": {
           "$ref": "#/definitions/stringExpression",

@@ -28,9 +28,40 @@
           "$designer": {
             "id": "10gG1m"
           },
-          "arg1": 12,
-          "arg2": 13,
-          "resultProperty": "dialog.result"
+          "arg2": "hi",
+          "resultProperty": "dialog.result",
+          "arg1": "name:bob",
+          "message": "name:bob"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "yBvH7G"
+          },
+          "arg2": "hi",
+          "resultProperty": "dialog.result",
+          "arg1": "phone:123",
+          "message": "phone:123"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "Ic34xT"
+          },
+          "arg2": "hi",
+          "resultProperty": "dialog.result",
+          "arg1": "email:@email.com",
+          "message": "email:bob@bob.com"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "NcHDso"
+          },
+          "arg2": "hi",
+          "resultProperty": "dialog.result",
+          "arg1": "submit ticket",
+          "message": "submit ticket"
         },
         {
           "$kind": "Microsoft.SendActivity",
