@@ -22,8 +22,9 @@
 ]
 
 # SendActivity_lghK7W_text()
-- Your ticket number is: ${dialog.result}
+- Your ticket number is: ${user.ticketNo}
 # SendActivity_lghK7W()
 [Activity
     Text = ${SendActivity_lghK7W_text()}
 ]
+
