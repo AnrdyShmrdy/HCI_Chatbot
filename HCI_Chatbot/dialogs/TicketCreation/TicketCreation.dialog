@@ -70,10 +70,46 @@
           "arg2": "8",
           "resultProperty": "dialog.result",
           "filePath": "c:\\temp\\MyTest.txt",
-          "ticketNumber": "dialog.result",
+          "ticketNumber": "user.ticketNo",
           "email": "=user.email",
           "name": "=user.name",
           "phoneNumber": "=user.phoneNumber"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "DmW11E"
+          },
+          "message": "name:${user.name}",
+          "resultProperty": "dialog.resutl"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "987Set"
+          },
+          "message": "ticket:${user.ticketNo}"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "Jes0AT"
+          },
+          "message": "phone:${user.phoneNumber}"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "HtCXJW"
+          },
+          "message": "email:${user.email}"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "SJK3TL"
+          },
+          "message": "submit ticket"
         },
         {
           "$kind": "Microsoft.SendActivity",

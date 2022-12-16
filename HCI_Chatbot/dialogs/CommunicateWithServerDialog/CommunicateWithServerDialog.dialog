@@ -1,0 +1,79 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "9Tw8UJ",
+    "name": "CommunicateWithServerDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "WIh0cP"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "9AXLWE"
+          },
+          "activity": "${SendActivity_9AXLWE()}"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "10gG1m"
+          },
+          "arg2": "hi",
+          "resultProperty": "dialog.result",
+          "arg1": "name:bob",
+          "message": "name:bob"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "yBvH7G"
+          },
+          "arg2": "hi",
+          "resultProperty": "dialog.result",
+          "arg1": "phone:123",
+          "message": "phone:123"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "Ic34xT"
+          },
+          "arg2": "hi",
+          "resultProperty": "dialog.result",
+          "arg1": "email:@email.com",
+          "message": "email:bob@bob.com"
+        },
+        {
+          "$kind": "CommunicateWithServer",
+          "$designer": {
+            "id": "NcHDso"
+          },
+          "arg2": "hi",
+          "resultProperty": "dialog.result",
+          "arg1": "submit ticket",
+          "message": "submit ticket"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "g5NRAY"
+          },
+          "activity": "${SendActivity_g5NRAY()}"
+        }
+      ]
+    }
+  ],
+  "generator": "CommunicateWithServerDialog.lg",
+  "recognizer": "CommunicateWithServerDialog.lu.qna",
+  "id": "CommunicateWithServerDialog"
+}

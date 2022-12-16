@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# SendActivity_9AXLWE()
+[Activity
+    Text = ${SendActivity_9AXLWE_text()}
+]
+
+# SendActivity_9AXLWE_text()
+- Dialog Test Response
+# SendActivity_g5NRAY()
+[Activity
+    Text = ${SendActivity_g5NRAY_text()}
+]
+
+# SendActivity_g5NRAY_text()
+- Dialog Test Result: ${dialog.result}

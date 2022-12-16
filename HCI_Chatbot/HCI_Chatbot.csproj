@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime" Version="4.18.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommunicateWithServer\CommunicateWithServer.csproj" />
     <ProjectReference Include="..\GenerateTicket\GenerateTicket.csproj" />
   </ItemGroup>
 </Project>
