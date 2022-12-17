@@ -6,4 +6,11 @@
 ]
 
 # SendActivity_xJHokB_text()
-- See this resource: https://www.businessnewsdaily.com/1368-6-signs-computer-infected.html
+- For more details we encourage you to check out the following resources on virus protection: https://www.businessnewsdaily.com/1368-6-signs-computer-infected.html
+# SendActivity_oP8lDA()
+[Activity
+    Text = ${SendActivity_oP8lDA_text()}
+]
+
+# SendActivity_oP8lDA_text()
+- If you believe you have a compter virus, we encourage you to download a reputable anti-virus software such as Norton Antivirus, Malwarebytes, or Avast. Scan your PC using Windows Defender if you are a Windows user. Alternatively you may choose to restore your computer to an earlier state to see if this solves your issue.

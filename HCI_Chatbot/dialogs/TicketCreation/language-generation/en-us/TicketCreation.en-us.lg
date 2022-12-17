@@ -1,30 +1,44 @@
 [import](common.lg)
 
 # TextInput_Prompt_wNw7T1_text()
-- What is your name?
+- May I have a good first and last name for you?
 # TextInput_Prompt_wNw7T1()
 [Activity
     Text = ${TextInput_Prompt_wNw7T1_text()}
 ]
 
 # TextInput_Prompt_T0CSw3_text()
-- What is your email?
+- What is a good email to reach you at?
 # TextInput_Prompt_T0CSw3()
 [Activity
     Text = ${TextInput_Prompt_T0CSw3_text()}
 ]
 
 # TextInput_Prompt_E4JWZq_text()
-- What is your phone number?
+- What is a preferred cell phone number to reach you at?
 # TextInput_Prompt_E4JWZq()
 [Activity
     Text = ${TextInput_Prompt_E4JWZq_text()}
 ]
 
 # SendActivity_lghK7W_text()
-- Your ticket number is: ${user.ticketNo}
+- Thank you for creating a support ticket. An agent will contact you within the next 24 to 48 hours. Your ticket number is: ${user.ticketNo}
 # SendActivity_lghK7W()
 [Activity
     Text = ${SendActivity_lghK7W_text()}
 ]
 
+# SendActivity_wkiFNR()
+[Activity
+    Text = ${SendActivity_wkiFNR_text()}
+]
+
+# SendActivity_wkiFNR_text()
+- If you're still in need of immediate support or you are confused on something, please feel free to call the office number to speak with a live agent during our 9-5 business hours. The average turnaround time for support tickets at this time is approximately 24-48 hours at this present time.
+# SendActivity_xmziox()
+[Activity
+    Text = ${SendActivity_xmziox_text()}
+]
+
+# SendActivity_xmziox_text()
+- In order to create a support ticket for you, I need to collect some information from you. Make note of the ticket number that will be generated, and keep an eye on your email for any updates on your support request.

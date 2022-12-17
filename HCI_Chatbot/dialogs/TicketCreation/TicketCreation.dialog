@@ -17,6 +17,20 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "wkiFNR"
+          },
+          "activity": "${SendActivity_wkiFNR()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "xmziox"
+          },
+          "activity": "${SendActivity_xmziox()}"
+        },
+        {
           "$kind": "Microsoft.TextInput",
           "$designer": {
             "id": "wNw7T1"

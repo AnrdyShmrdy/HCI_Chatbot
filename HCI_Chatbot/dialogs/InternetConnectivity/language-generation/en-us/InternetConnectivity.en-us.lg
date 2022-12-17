@@ -6,4 +6,11 @@
 ]
 
 # SendActivity_qThzSK_text()
-- Check out this website: https://www.highspeedinternet.com/resources/no-internet-connection-troubleshooting-guide
+- If you are still having issues, feel free to check out some additional troubleshooting resources below: https://www.highspeedinternet.com/resources/no-internet-connection-troubleshooting-guide
+# SendActivity_bNBiFf()
+[Activity
+    Text = ${SendActivity_bNBiFf_text()}
+]
+
+# SendActivity_bNBiFf_text()
+- If you believe you are having issues connecting to the internet, first check to see if your desktop or laptop is plugged into either the wired ethernet connection or connected to a WiFi network. Attempt to disconnect and reconnnect to the network you are on. You may also attempt to use Windows Network Diagnostics if the option is presented to you. Check you router to see if it is powered on or if there are any loose cables. You might also want to try restarting your computer if you are finding none of the above is working for you, or you may try resetting your modem or router as well. 

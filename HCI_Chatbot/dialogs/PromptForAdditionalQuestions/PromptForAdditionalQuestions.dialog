@@ -17,52 +17,18 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.ConfirmInput",
+          "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "OjHKhT"
+            "id": "VKliYy"
           },
-          "defaultLocale": "en-us",
-          "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": true,
-          "allowInterruptions": false,
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "",
-          "prompt": "${ConfirmInput_Prompt_OjHKhT()}",
-          "choiceOptions": {
-            "includeNumbers": true,
-            "inlineOrMore": ", or ",
-            "inlineOr": " or ",
-            "inlineSeparator": ", "
-          },
-          "property": "user.response",
-          "confirmChoices": []
+          "activity": "${SendActivity_VKliYy()}"
         },
         {
-          "$kind": "Microsoft.IfCondition",
+          "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "ITGCzx"
+            "id": "6agVC2"
           },
-          "actions": [
-            {
-              "$kind": "Microsoft.BeginDialog",
-              "$designer": {
-                "id": "8uP5Mo"
-              },
-              "activityProcessed": true,
-              "dialog": "ConversationStart"
-            }
-          ],
-          "elseActions": [
-            {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "YatEGr"
-              },
-              "activity": "${SendActivity_YatEGr()}"
-            }
-          ],
-          "condition": "=user.response"
+          "activity": "${SendActivity_6agVC2()}"
         }
       ]
     }

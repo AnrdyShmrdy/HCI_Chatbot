@@ -1,7 +1,7 @@
 [import](common.lg)
 
 # SendActivity_fgBTsz_text()
-- What kind of problem are you having?
+- How may I assist you today? Type your question below or select from one of the most commonly asked questions below:
 # SendActivity_fgBTsz()
 [Activity
     Text = ${SendActivity_fgBTsz_text()}

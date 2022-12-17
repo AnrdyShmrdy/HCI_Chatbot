@@ -19,6 +19,13 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
+            "id": "Nfs9ZC"
+          },
+          "activity": "${SendActivity_Nfs9ZC()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
             "id": "Wo8PaN"
           },
           "activity": "${SendActivity_Wo8PaN()}"

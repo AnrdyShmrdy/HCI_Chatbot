@@ -6,4 +6,11 @@
 ]
 
 # SendActivity_Wo8PaN_text()
-- See this resource: https://www.cnet.com/tech/computing/why-is-my-computer-so-slow/
+- If you are still unsure feel free to check out some additional resources for troubleshooting here: https://www.cnet.com/tech/computing/why-is-my-computer-so-slow/
+# SendActivity_Nfs9ZC()
+[Activity
+    Text = ${SendActivity_Nfs9ZC_text()}
+]
+
+# SendActivity_Nfs9ZC_text()
+- If you are finding your computer is slow or is getting gradually slower, you might want to try doing an Anti-Virus scan, as a virus can lead to a slower computer. You might also want to use a trustworthy optimization software such as CCleaner. Another option would be to add more RAM to your motherboard or adjust the amount of virtual memory available to your computer in your performance settings (you might need to search your settings for this).
