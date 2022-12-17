@@ -6,8 +6,7 @@
         "ConversationStart.en-us"
       ],
       "ComputerSlow": [
-        "ComputerSlowAnswer.en-us",
-        "PromptForAdditionalQuestions.en-us"
+        "ComputerSlowAnswer.en-us"
       ],
       "ComputerVirus": [
         "ComputerVirus.en-us"

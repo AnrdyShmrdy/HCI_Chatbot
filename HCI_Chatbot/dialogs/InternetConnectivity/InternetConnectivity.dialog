@@ -19,6 +19,13 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
+            "id": "bNBiFf"
+          },
+          "activity": "${SendActivity_bNBiFf()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
             "id": "qThzSK"
           },
           "activity": "${SendActivity_qThzSK()}"

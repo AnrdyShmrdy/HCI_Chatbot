@@ -1,17 +1,16 @@
 [import](common.lg)
 
-# ConfirmInput_Prompt_OjHKhT()
+# SendActivity_VKliYy()
 [Activity
-    Text = ${ConfirmInput_Prompt_OjHKhT_text()}
-    SuggestedActions = Yes | No
+    Text = ${SendActivity_VKliYy_text()}
 ]
 
-# ConfirmInput_Prompt_OjHKhT_text()
-- Do you have any other questions?
-# SendActivity_YatEGr()
+# SendActivity_VKliYy_text()
+- If none of the above has helped you or you are still having issues with your computer, we encourage you to dial our support number or submit a ticket with a description of the error you are recieving
+# SendActivity_6agVC2_text()
+- Is there anything else I can do to assist you today?
+# SendActivity_6agVC2()
 [Activity
-    Text = ${SendActivity_YatEGr_text()}
+    Text = ${SendActivity_6agVC2_text()}
+    SuggestedActions = printer connection | computer virus | internet connectivity | computer slow | computer not turning on | other problem
 ]
-
-# SendActivity_YatEGr_text()
-- Have a great day!

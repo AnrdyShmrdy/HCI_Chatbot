@@ -6,4 +6,12 @@
 ]
 
 # SendActivity_GGw82m_text()
-- Check out this resource: https://www.pcmag.com/how-to/printer-wont-connect-to-wi-fi-try-these-fixes
+- ```If you're still unsure of what to do feel free to check out some additional resources related to diagnosing your printer connection here:
+https://www.pcmag.com/how\-to/printer\-wont\-connect\-to\-wi\-fi\-try\-these\-fixes```
+# SendActivity_udGxD4()
+[Activity
+    Text = ${SendActivity_udGxD4_text()}
+]
+
+# SendActivity_udGxD4_text()
+- If you are having issues connecting to your printer and printing documents, first check to see if you are connected to the same wireless or wired network that your printer is on. Alternatively you can try to connect directly to your printer using a usb-printer cable (if not already connected with this method), or reinstall your printer drivers. You might also want to turn your printer or your computer on or off and see if this resolves the issue. If not, check your printer manual for your printer and see if the manufacturer has any tools or software for connecting to your printer, or methods for troubleshooting your connection

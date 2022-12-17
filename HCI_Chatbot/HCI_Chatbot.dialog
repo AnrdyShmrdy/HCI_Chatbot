@@ -82,14 +82,6 @@
           },
           "activityProcessed": true,
           "dialog": "ComputerSlowAnswer"
-        },
-        {
-          "$kind": "Microsoft.BeginDialog",
-          "$designer": {
-            "id": "UQqTQT"
-          },
-          "activityProcessed": true,
-          "dialog": "PromptForAdditionalQuestions"
         }
       ]
     },

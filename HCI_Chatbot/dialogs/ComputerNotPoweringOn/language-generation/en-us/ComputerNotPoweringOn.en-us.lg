@@ -6,4 +6,15 @@
 ]
 
 # SendActivity_sffSzl_text()
-- Check out this online resource: https://www.pcmag.com/how-to/what-to-do-when-computer-wont-start
+- Check out this online resource if you have any additional questions: https://www.pcmag.com/how-to/what-to-do-when-computer-wont-start
+# SendActivity_vevjQ0()
+[Activity
+    Text = ${SendActivity_vevjQ0_text()}
+]
+
+# SendActivity_vevjQ0_text()
+- ```Try one of the following:
+\- Check and see if your computer's power cable is plugged into the wall
+\- Check your breaker box or use an outlet tester to confirm if your wall socket is receiving power
+\- Confirm that there are no frays or breaks in the power cable you are using
+\- If on hand, check the manual for your computer for the vendor\-specific troubleshooting steps```
